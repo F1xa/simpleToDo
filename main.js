@@ -73,16 +73,22 @@ deleteTask("go to the gym");
 
 
 function showList() {
+  let toDo,
+      inProgress,
+      Done;
   for (let key in list) {
     switch (list[key]) {
       case "To Do":
-        return `ToDo: ${key}`;
+       toDo = `${key}`;
       case "In Progress":
-        return `In Progress: ${key}`;
+        inProgress = `${key}`;
       case "Done":
-        return `Done: -`;
+        Done = `-`;
     }
   }
+  return ` Todo: \n  "${toDo}"\n In Progress: \n  "${inProgress}"\n Done: \n  ${Done}`;
+  
+  
 };
 
 
